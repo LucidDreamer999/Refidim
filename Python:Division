@@ -1,0 +1,4 @@
+a = int(input("The first number is: "))
+b = int(input("The second number is: "))
+print("Integer division: ", a//b)
+print("Float division: ", a/b)
