@@ -1,0 +1,2 @@
+s = "Peter Piper Picked a Peck of Pickled Peppers"
+print(s.swapcase())
