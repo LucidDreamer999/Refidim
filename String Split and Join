@@ -1,0 +1,5 @@
+string = (input("Type a sentence here: "))
+string = string.split(" ")
+print("The individual words are: ",string)
+s = ("-").join(string)
+print("The hyphenated sentence is: ",s)
