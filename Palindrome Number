@@ -1,0 +1,4 @@
+data = str(input("Enter a number to check whether it's a palindrome: ")).replace(" ", "")
+if data == data[::-1]:
+    print("True! :)")
+else: print("False :(")
