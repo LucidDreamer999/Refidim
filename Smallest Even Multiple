@@ -1,0 +1,8 @@
+num = int(input("Enter a number here: "))
+def smallestEvenMultiple(num):
+    if num % 2 == 0:
+        return num
+    else:
+        return num * 2
+print("The smallest even multiple is: ",smallestEvenMultiple(num))
+    
