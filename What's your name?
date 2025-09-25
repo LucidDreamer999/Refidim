@@ -1,0 +1,6 @@
+def print_full_name(first,last):
+    first = (input("Enter your first name: "))
+    last = (input("Enter your last name: "))
+    print("Hello "+ first + last +"! You just delved into python.")
+    
+print_full_name("first", "last")
