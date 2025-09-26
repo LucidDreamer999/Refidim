@@ -1,0 +1,6 @@
+n = int(input("Enter an integer less than 21 here: "))
+num = list(range(n))
+print("Too high, try again:(") if n > 20 else [print (x*x) for x in num]
+
+
+
