@@ -1,0 +1,5 @@
+w = int(input("Enter the weight of the watermelon here: "))
+print("YES") if w % 2 == 0 and w > 2 else print("NO")
+
+
+
