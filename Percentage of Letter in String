@@ -1,0 +1,10 @@
+s = str(input("Enter the word here: ")).lower()
+L = str(input("Enter the letter to find percentage of here: ")).lower()
+a = len(s)
+count = 0
+for chr in s:
+    if chr == L:
+        count += 1
+
+percentage = int((count / a) * 100)
+print("The percentage of", L, "in", s, "is", percentage, "%")
