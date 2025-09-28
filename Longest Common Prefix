@@ -1,0 +1,8 @@
+strings = [input("Enter a word here: ").lower() for _ in range(3)]
+result = ""
+for chars in zip(*strings):  
+    if len(set(chars)) == 1:
+        result += chars[0]
+    else:
+        break
+print(result)
