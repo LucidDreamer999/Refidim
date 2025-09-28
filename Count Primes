@@ -1,0 +1,11 @@
+n = int(input("Enter a number here: "))
+R = list(range(n))
+for i in R[:]:
+    if i % 2 == 0:
+        R.remove(i)
+print(R)
+for x in R[:]:
+    if x % 5 == 0 or x % 7 == 0 or x % 3 == 0:
+        R.remove(x)
+print(R)
+print(len(R))
