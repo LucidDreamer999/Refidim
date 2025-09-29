@@ -1,0 +1,12 @@
+n = int(input("Enter the number of scores here: "))
+while True:
+    scores = list(map(int, input("Enter the scores separated by space: ").split()))
+    if len(scores) != n:
+        print(f"Error: Expected {n} scores, but got {len(scores)}. Try again.")
+    else:
+        print("Scores accepted.")
+        break
+scores = list(set(scores))  # Remove duplicates
+m = max(scores)
+scores.remove(m)
+print("The runner-up score is: ", int(max(scores)))
