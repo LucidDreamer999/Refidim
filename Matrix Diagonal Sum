@@ -1,0 +1,22 @@
+print("")
+size = int(input("Enter the size of the matrix here: "))
+print("Separate each number with a space")
+while True:
+    mat = []
+    for i in range(size):
+        row = input(f"Row {i+1}: ").split()
+        mat.append(row)
+    if all(len(row) == size for row in mat):
+        for r in mat:
+            print(" ".join(r))
+    else:
+        print(f"Error: Each row must have exactly {size} entries. Please try again.")
+        break
+    diagonals = set()
+    for x in range(size):
+        diagonals.add(int(mat[x][x]))
+        diagonals.add(int(mat[x][size-1-x]))
+    print("If no number from the diagonals is repeated, the sum of the diagonals is:", sum(diagonals))
+    print("")
+
+    
