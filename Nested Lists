@@ -1,0 +1,13 @@
+N = (input("How many people are in the class? "))
+NL = []
+for i in range(int(N)):
+    name = input("Enter the name of the student here: ")
+    grade = float(input("Enter the grade of the student here: "))
+    i = (name, grade)
+    NL.append(i)
+target = max(n[1] for n in NL)
+NL = [n for n in NL if n[1] != target]
+for name, grade in NL:
+    if grade == max(n[1] for n in NL):
+        NL.sort(key = lambda x: x[0])
+        print(name,grade)
