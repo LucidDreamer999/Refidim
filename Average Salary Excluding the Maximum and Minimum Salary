@@ -1,0 +1,9 @@
+i = int((input("How many workers are there? ")))
+salary = []
+for x in range(i):   
+    s = input("Enter the salary of worker number " + str(x+1) + " here: ")
+    salary.append(s)
+salary.remove(max(salary))
+salary.remove(min(salary))
+average = sum(int(x) for x in salary) / len(salary)
+print("The average salary, excluding the maximum and minimum, is: " + str(average))
