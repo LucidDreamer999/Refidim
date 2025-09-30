@@ -1,0 +1,14 @@
+import random
+s = (input("Enter a sentence: "))
+while True:
+    extra = input("Enter the extra letter: ")
+    if len(extra) > 1:
+        print("Error: Please enter only one letter. Try again.")
+    else:
+        break
+letters = list(s)
+random.shuffle(letters)
+pos = random.randint(0, len(letters))
+letters.insert(pos, extra)
+t = "".join(letters)
+print(t)
