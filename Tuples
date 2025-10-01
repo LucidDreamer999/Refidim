@@ -1,0 +1,3 @@
+n = int(input("Enter the number of elements in the tuple here: "))
+t = input("Enter the elements of the tuple here: ")
+print(hash(t))
