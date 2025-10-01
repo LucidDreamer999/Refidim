@@ -1,0 +1,20 @@
+N = int(input("Enter the number of commands here: "))
+L = []
+for i in range(N):
+    command = input("Enter a command here :").split()
+    switch  = {
+        "print": lambda: print(L),
+        "remove": lambda: L.remove(int(command[1])),
+        "append": lambda: L.append(int(command[1])),
+        "insert i e" : lambda: L.insert(int(command[1]), int(command[2])),
+        "sort" : lambda: L.sort(),
+        "pop" : lambda: L.pop(),
+        "reverse" : lambda: L.reverse()
+    }
+    action = switch.get(command[0])
+    if action:
+        action()
+    else:
+        print("Invalid command")
+
+    
