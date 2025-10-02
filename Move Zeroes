@@ -1,0 +1,6 @@
+u = list(input("Enter the numbers here: ").split())
+for i in u:
+    if i == '0':
+        u.remove(i)
+        u.append(i)
+print(u)
