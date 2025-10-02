@@ -1,0 +1,18 @@
+from collections import Counter
+X = int(input("Enter the number of shoes: "))
+S = list(map(int, input("Enter all shoes sizes here: ").split()))
+for i in S: 
+    print("Sorry, Size is too big") if i > 20 else print("Sorry, Size is too small") if i < 2 else None 
+if len(S) > X:
+    print("Error: Number of shoe sizes exceeds number of shoes.") 
+N = int(input("Enter the number of customers: "))
+inventory = Counter(S)
+U = 0
+for i in range(N):
+    size, price = map(int, input("Enter the shoe size and the price of the shoe ").split())
+    if inventory[size]>0:
+        U += price
+        inventory[size] -= 1
+print("Raghu made ", U, "in sales.")
+
+ 
