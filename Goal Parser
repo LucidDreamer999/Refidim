@@ -1,0 +1,17 @@
+command = (input("Enter any of the following alphabet, 'G', '(al)' or '()' in any order you like as a command:").strip())
+output = []
+i = 0
+while len(command) > i:
+    if command[i] == "G":
+        output.append("G")
+        i += 1
+    elif command[i:i+2] == "()":
+        output.append("o")
+        i += 2
+    elif command[i:i+4] == "(al)":
+        output.append("al")
+        i += 4
+    else:
+        print("Invalid command")
+        break
+print("".join(output))
