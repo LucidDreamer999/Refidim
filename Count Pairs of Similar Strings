@@ -1,0 +1,9 @@
+words = list(input("Enter some words separated by spaces here: ").split())
+count = 0
+for i in range(len(words)):
+    for j in range(i+1, len(words)):
+        if set(words[i]) == set(words[j]) and i >= 0 and j >= len(words)-1:
+            count += 1
+        else:
+            continue
+print(count)
