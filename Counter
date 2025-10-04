@@ -10,7 +10,7 @@ inventory = Counter(S)
 U = 0
 for i in range(N):
     size, price = map(int, input("Enter the shoe size and the price of the shoe ").split())
-    if inventory[size]>0:
+    if inventory[size] > 0:
         U += price
         inventory[size] -= 1
 print("Raghu made ", U, "in sales.")
