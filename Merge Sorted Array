@@ -1,0 +1,8 @@
+nums1 = list(input("Enter some numbers here: "))
+nums2 = list(input("Enter some numbers here: "))
+nums1.extend(['0'] * len(nums2))
+for i in range(len(nums2)):
+    nums1[len(nums1) - len(nums2) + i] = nums2[i] 
+nums1.sort()
+nums1.reverse()
+print(nums1)
