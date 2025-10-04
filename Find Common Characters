@@ -1,0 +1,10 @@
+words = list(map(str, input("Enter words separated by spaces here:").lower().split()))
+characters = []
+for letter in words[0]:
+    condition = True
+    for i in range(1, len(words)):
+            if letter not in words[i]:
+                condition = False
+    if condition:
+        characters.append(letter)               
+print(characters)
