@@ -1,0 +1,8 @@
+nums = list(map(float, input('Enter numbers separated by spaces here: ').split()))
+per = []
+for i in range(len(nums) - 2):
+    a,b,c = nums[i], nums[i+1], nums[i+2]
+    if a + b > c and a + c > b and c + b > a:
+        per.append((a,b,c)) 
+print(per)  
+print(max(per, key= lambda x: sum(x)))
