@@ -1,0 +1,5 @@
+import textwrap
+S = input("Enter a lot of letters here: ")
+w = int(input("Enter the width of the paragraph here: "))
+solution = textwrap.wrap(S, w)
+print("\n".join(solution))
