@@ -1,0 +1,6 @@
+n = input('Enter the number of students who subscribed to the English newspaper: ')
+R1 = set(input('Enter the roll numbers of students who subscribed to the English newspaper: ').split())
+b = input('Enter the number of students who subscribed to the French newspaper: ')
+R2 = set(input('Enter the roll numbers of students who subscribed to the French newspaper: ').split())
+N1 = R1.difference(R2)
+print(len(N1))
