@@ -1,0 +1,63 @@
+s = input("Type your input here: ")
+result = ''
+temp = ''
+for item in s + '#':
+    if item != '#':
+        temp += item
+    else:
+        if temp != '':
+            match temp: 
+                case '1': 
+                    result += 'a'
+                case '2': 
+                    result += 'b'
+                case '3': 
+                    result += 'c'
+                case '4': 
+                    result += 'd'
+                case '5': 
+                    result += 'e'
+                case '6': 
+                    result += 'f'
+                case '7': 
+                    result += 'g'
+                case '8': 
+                    result += 'h'
+                case '9': 
+                    result += 'i'
+                case '10': 
+                    result += 'j'
+                case '11': 
+                    result += 'k'
+                case '12': 
+                    result += 'l'
+                case '13': 
+                    result += 'm'
+                case '14': 
+                    result += 'n'
+                case '15': 
+                    result += 'o'
+                case '16': 
+                    result += 'p'
+                case '17': 
+                    result += 'q'
+                case '18': 
+                    result += 'r'
+                case '19': 
+                    result += 's'
+                case '20': 
+                    result += 't'
+                case '21': 
+                    result += 'u'
+                case '22': 
+                    result += 'v'
+                case '23': 
+                    result += 'w'
+                case '24': 
+                    result += 'x'
+                case '25': 
+                    result += 'y'
+                case '26': 
+                    result += 'z'
+            temp = ''
+print(result)
