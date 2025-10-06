@@ -1,0 +1,12 @@
+A = set(input('Enter the elements of set A here: ').split())
+n = int(input('Enter the number of other sets here: '))
+arr = []
+for i in range(2, n+2):
+    B = input('Enter the elements of set ' + str(i) + ' here:').split()
+    arr.append(set(B))
+for j in arr:
+    if A == j:
+        print('False')
+    else: 
+        print('True')
+    break
