@@ -1,0 +1,16 @@
+x = int(input('Enter the x-coordinate here: '))
+y = int(input('Enter the y-coordinate here: '))
+points = list(input('Enter points like "x1,y1 x2,y2 x3,y3 here: ').split())
+points = [tuple(map(int, p.split(','))) for p in points]
+valid_points = []
+for a in points:
+    if a[0] == x or a[1] == y:
+        valid_points.append(a)
+if len(valid_points) == 0: 
+    print('-1') 
+else:
+    index = []
+    for i in valid_points:
+        I = abs(i[0] - x) + abs(i[1] - y) 
+        index.append(I)
+    print(min(index)) 
