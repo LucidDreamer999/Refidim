@@ -1,0 +1,17 @@
+# Make input lines to ask the user the number of students and subjects, N and X 
+N = input('Enter the number of students: ')
+X = input('Enter the number of subjects: ')
+# Separate the inputs into different variables
+# Prompt the user to enter the scores for each student in each subject using a loop that repeats X number of times, the same as the number of subjects
+arr =[]
+for i in range(int(X)):
+    scores = input(f'Enter the scores for subject {i+1} separated by spaces: ').split()
+    arr.append(scores)
+# Zip the subject scores together
+zipped_scores = zip(*arr) 
+# Calculate the average score for each student across all subjects using the stated formula 
+for j in zipped_scores:
+    avg = sum(map(int, j)) / len(j)
+    print(avg)
+# Calculate the average of each zipped entry, correct to one decimal place
+
