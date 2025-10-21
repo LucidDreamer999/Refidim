@@ -1,0 +1,14 @@
+from collections import OrderedDict
+N = int(input('Enter the number of items here: '))
+items = OrderedDict()
+for i in range(N):
+    user = input(f'Enter item {i+1} and its price here: ')
+    line = user.rsplit(' ', 1)
+    item_name = line[0]
+    item_price = float(line[1])
+    if item_name in items:
+        items[item_name] += item_price
+    else:
+        items[item_name] = item_price
+for item, price in items.items():
+    print(item, price)
