@@ -1,0 +1,24 @@
+'''
+Ask the user to input the values of the integers for m and n.
+Ask the user to input n values for group A, and m values for group B, line by line.
+For each of the m words in group B, if they do not show up in group A, print '-1' otherwise print the indices of their occurence in group A.
+'''
+from collections import defaultdict
+groups = defaultdict(list)
+m = int(input('Enter the number of words in group A: '))
+n = int(input('Enter the number of words in group B: '))
+for i in range(m):
+    word = input(f'Enter word {i + 1} for group A: ')
+    groups['A'].append(word)
+for j in range(n):
+    word = input(f'Enter word {j + 1} for group B: ')
+    groups['B'].append(word)
+positions = []
+for word in groups['B']:
+    if word not in groups['A']:
+        print('-1')
+    else:
+        for k in range(len(groups['A'])):
+            if groups['A'][k] == word:
+                positions.append(k)
+                print(*positions)
