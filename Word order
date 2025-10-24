@@ -1,0 +1,21 @@
+'''
+Ask the user for the number of words and store it as an integer in a variable.
+Ask the user to input the words one at a time, on a fresh line each, corresponding to the number they specified.
+Count the number of distinct words from the user's input, and  print it out.
+Starting from the first word to the last, print the number of occurrences from the input for each of them.
+'''
+no = int(input('Enter the number of words here:')).lower()
+words = []
+for i in range(no):
+    word = input(f'Enter word {i + 1} here: ')
+    words.append(word)
+distinct_words = []
+for word in words:
+    if word not in distinct_words:
+        distinct_words.append(word)
+print(len(distinct_words))
+occurrences = []
+for j in distinct_words:
+    count = words.count(j)
+    occurrences.append(count)
+print(*occurrences)
