@@ -1,0 +1,13 @@
+'''
+Ask the user for two inputs: one a list of words and the other the order for the alien language.
+Subject both inputs to lowercase characterisation.
+Compare the words in the list to each other.
+If the beginning letter of the first word is higher in the order than the second, immediately print false.
+If the words all start with the same letter, check the second letter in the words from left to right to see whether the order is followed.
+If it is not, print false again. 
+If the order specified by the user is followed, print true.
+'''
+words = input("Enter a list of words separated by spaces: ").lower().split()
+order = input("Enter the order of the alien language: ").lower()
+print(True) if all(order.index(word[0]) == order.index(words[0][0]) for word in words) else print(False)
+      
