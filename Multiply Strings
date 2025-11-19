@@ -1,12 +1,19 @@
 num1 = input("Enter num1 here: ")
 num2 = input("Enter num2 here: ")
-n = 0
+
 one = num1[::-1]
 two = num2[::-1]
-add = []
-for i in num1:
-    for j in num2:
-        mul = (ord(one[n]) - ord('0')) * (ord(two[n]) - ord('0'))
-        add.append(mul)
-print(add)
 
+len1 = len(one)
+len2 = len(two)
+
+add = []
+
+for i in range(len1):
+    digit1 = (ord(one[i]) - ord('0')) * (10 ** i)
+    for j in range(len2):
+        digit2 = (ord(two[j]) - ord('0')) * (10 ** j)
+
+        mul = digit1 * digit2
+        add.append(mul)
+print(sum(add))
