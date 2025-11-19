@@ -16,4 +16,4 @@ for i in range(len1):
 
         mul = digit1 * digit2
         add.append(mul)
-print(sum(add))
+print(str(sum(add)))
