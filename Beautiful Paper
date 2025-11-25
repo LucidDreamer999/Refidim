@@ -1,2 +1,6 @@
 n = input("Enter the letters for the coloured sheets of paper Vasya has here: ")
 m = input("Enter the letters for the papers in the garland here: ")
+for i in n:
+    if i not in m:
+        print(-1)
+
