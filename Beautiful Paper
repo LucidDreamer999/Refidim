@@ -1,0 +1,2 @@
+n = input("Enter the letters for the coloured sheets of paper Vasya has here: ")
+m = input("Enter the letters for the papers in the garland here: ")
