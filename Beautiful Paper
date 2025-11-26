@@ -1,5 +1,13 @@
 n = input("Enter the letters for the coloured sheets of paper Vasya has here: ")
 m = input("Enter the letters for the papers in the garland here: ")
-for i in n:
-    if i not in m:
+count = {}
+for i in m:
+    if i not in n:
         print(-1)
+        exit()
+for i in m:
+    if i in count:
+        count[i] += 1
+    else:
+        count[i] = 1
+print(count)
