@@ -4,10 +4,31 @@ count = {}
 for i in m:
     if i not in n:
         print(-1)
-        exit()
+             exit()
 for i in m:
-    if i in count:
-        count[i] += 1
+    if i in count_m:
+        count_m[i] += 1
     else:
-        count[i] = 1
-print(count)
+        count_m[i] = 1
+for j in n:
+    if j in count_n:
+        count_n[j] += 1
+    else:
+        count_n[j] = 1
+print(count_n)
+print(count_m)
+area = 0
+ 
+common_letters = count_n.keys() & count_m.keys()
+
+for letter in common_letters:
+    a = count_n[letter]   
+    b = count_m[letter]   
+    
+    if a > b:
+        area += b  
+    elif a < b:
+        area += a
+    else:
+        area += a 
+print(area)
