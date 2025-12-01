@@ -1,0 +1,6 @@
+t = int(input ("Enter the number of test cases here: "))
+test_cases = []
+for i in range(t):
+    y = input("In the order of n, k, b, s, enter a test case here: \n")
+    test_cases.append(y)
+    continue
