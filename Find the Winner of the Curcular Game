@@ -1,9 +1,0 @@
-n = int(input("Enter the value of n here: "))
-k = int(input("Enter the value of k here: "))
-game = list(range(1,n+1))
-a = int(len(game))
-current_index = 0
-while len(game) > 1:
-    current_index = ((current_index + (k-1)) % len(game))
-    eliminated = game.pop(current_index)
-print(game)
