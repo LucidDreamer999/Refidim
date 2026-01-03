@@ -5,7 +5,7 @@ m = (t1[1])
 if int(n) > 200 or int(m) > 200:
     print("m and n should each be less than 200! ")
 else:
+    case = []
     for i in range(int(n)):
-        case = []
         t = input(f"Enter {m} numbers here separated by spaces: ")     
         case.append(t)
